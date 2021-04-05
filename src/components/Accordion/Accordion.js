@@ -7,7 +7,7 @@ const Accordion = ({ data, theme }) => {
   return (
     <div className={`accordion accordion--theme--${theme}`}>
       {
-        data.map(panel => <AccordionItem key={panel.id} {...panel} />)
+        data.map(item => <AccordionItem key={item.id} {...item} />)
       }
     </div>
   )

@@ -1,8 +1,9 @@
 import React, { useRef } from 'react'
+import { connect } from 'react-redux';
 import { componentsData } from '../../data';
 const sliderMH = componentsData.sliderMH;
 
-const Slidemh = ({ id, url, img, title, text, index, slideLeft, slideRight, slideFoo }) => {
+const Slidemh = ({ id, url, img, title, text, index, slideLeft, slideRight, slideFoo, probica }) => {
 
   const slide = useRef();
 
@@ -32,11 +33,16 @@ const Slidemh = ({ id, url, img, title, text, index, slideLeft, slideRight, slid
         <h3 className="slider__title">{title}</h3>
         <p className="slider__description">{text}&zwnj;</p>
         <div className="slider__action-btn">
-          <span className="read-more">Read More</span>
+          <span className="read-more">Read More {probica}</span>
         </div>
       </div>
     </a>
   )
 }
 
-export default Slidemh
+const mapStateToProps = (state) => {
+  // console.log({ state });
+  return { probica: state.proba1 }
+}
+
+export default connect(mapStateToProps)(Slidemh);

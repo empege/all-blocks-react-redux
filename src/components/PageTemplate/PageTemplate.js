@@ -12,13 +12,13 @@ const PageTemplate = () => {
     <div className="pageTemplate">
       <h1 className="pageTemplate__title">Some Page and Accordion khm... Accordingly</h1>
       <Accordion data={pageAccordionData} theme={'primary'} />
-      <Sidebar />
+      {/* <Sidebar /> */}
       {/* <Slider data={sliderData} /> */}
       {/* <Modal theme={'dark'} enterStyle={'fadein'} /> */}
       <Slidermh data={sliderMHData1} />
       <div className="small-test" style={{ maxWidth: '800px', margin: '0 auto', paddingBottom: '100px' }}>
-        <Slidermh data={sliderMHData2} />
-        <Slidermh data={sliderMHData1} />
+        {/* <Slidermh data={sliderMHData2} /> */}
+        {/* <Slidermh data={sliderMHData1} /> */}
       </div>
 
     </div >
